@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  height: 100vh;
+  background-color: #000;
+  background-image: url(/home/joshua/movie-site/src/mountain.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+a:hover {
+  color: #CEDEBD;
+}
+
+/*Header*/
+
+header {
+  position: relative;
+  padding: 0 2rem;
+
+}
+
+.nav-bar {
   display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+}
+
+.nav-bar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-bar .menu-button {
+  color: #fff;
+  font-size: 1.5rem;
+  display: none;
+  cursor: pointer;
+}
+.get-started {
+  background-color: #435334;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale .2 ease;
+}
+.get-started:hover {
+  scale: 1.05;
+  color: #fff;
+}
+.get-started:active {
+  scale: 0.95;
+}
+.search-text {
+ outline: #435334;
+ background: #fff;
+ height: 30px;
+ border-radius: 40px;
+}
+/*DROP DOWN*/
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  user-select: none;
+  height: 0px;
+  top: 60px;
+  right: 2rem;
+  width: 300px;
+  background: rgba(225, 225, 225, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transform-origin: all 0.5s;
+}
+.dropdown-menu.open {
+  height: 240px;
+}
+.dropdown-menu li {
+  padding: 0.75rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.dropdown-menu .get-started {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+}
+/*BODY CONTENTS*/
+.div-text {
+  text-align: center;
+  color: #9EB384;
+  margin-top: 30px;
+}
+.div-text h1 {
+  font-size: 2.7rem;
+  color: #CEDEBD;
+}
+.paragraphs {
+  font-size: 1rem;
+}
+.div-text .paragraphs .paragraph1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-bottom: 7px;
+}
+.div-text .paragraphs .paragraph2 {
+  color: #CEDEBD;
+  margin-bottom: 5px;
+}
+.div-text .paragraphs .link-para a{
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/*RESPONSIVE MODE*/
+
+@media( max-width: 992px) {
+  .nav-bar .links,
+  .nav-bar .get-started {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .nav-bar .menu-button {
+    display: block;
   }
+  .dropdown-menu {
+    display: block;
+  }
+  .div-text .paragraphs .paragraph1 {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .nav-bar .logo a {
+    font-size: 1rem;
+    font-weight: bold;
+    
+  }
+  
+  
 }
