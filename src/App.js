@@ -1,8 +1,8 @@
-
+import ImagesCard from './imagescard';
 import './App.css';
 import NavBar from './navbar';
 import BodyContents from './body contents';
-
+import Notice from './notice';
 
 
 function App() {       
@@ -10,6 +10,9 @@ function App() {
     <div>
 < NavBar />
 < BodyContents />
+<ImagesCard />
+<Notice />
+
 </div>
   )
    
